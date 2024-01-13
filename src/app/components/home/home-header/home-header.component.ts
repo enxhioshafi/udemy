@@ -8,4 +8,9 @@ import { HomeComponent } from '../home.component';
 })
 export class HomeHeaderComponent {
   collapsed = true;
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }
