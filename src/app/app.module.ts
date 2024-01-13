@@ -19,6 +19,9 @@ import { RecipeItemComponent } from './components/recipe-book/recipes/recipe-lis
 import { HomeComponent } from './components/home/home.component';
 import { HomeHeaderComponent } from './components/home/home-header/home-header.component';
 import { MainGameComponent } from './components/game/main-game/main-game.component';
+import { AddServerComponent } from './components/add-server/add-server.component';
+import { CockpitComponent } from './components/add-server/cockpit/cockpit.component';
+import { ServerElementComponent } from './components/add-server/server-element/server-element.component';
 
 
 
@@ -40,7 +43,10 @@ import { MainGameComponent } from './components/game/main-game/main-game.compone
     RecipeItemComponent,
     HomeComponent,
     HomeHeaderComponent,
-    MainGameComponent
+    MainGameComponent,
+    AddServerComponent,
+    CockpitComponent,
+    ServerElementComponent
     
   ],
   imports: [

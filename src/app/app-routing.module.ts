@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RecipesComponent } from './components/recipe-book/recipes/recipes.component';
 import { ShoppingListComponent } from './components/recipe-book/shopping-list/shopping-list.component';
 import { MainGameComponent } from './components/game/main-game/main-game.component';
+import { AddServerComponent } from './components/add-server/add-server.component';
 
 
 
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'recipe-book/recipes' , component: RecipesComponent },
   { path: 'recipe-book/shopping-list' , component: ShoppingListComponent },
   { path: 'game/main-game' , component: MainGameComponent },
+  { path: 'add-server' , component: AddServerComponent },
 
   
   {path: '', pathMatch: 'full',  component: HomeComponent},
