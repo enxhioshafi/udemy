@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Recipe } from '../recipe.model';
 
 
@@ -8,21 +8,23 @@ import { Recipe } from '../recipe.model';
   styleUrl: './recipe-list.component.css'
 })
 export class RecipeListComponent implements OnInit {
+  @Output() recipeWasSelected = new EventEmitter<Recipe>();
+  recipes: Recipe[] = [
+    new Recipe('A test Recipe', 'This is simply a test', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaFkdFbQrIJ1_04QcvO8h_ap_uZZ_nsXAmrtk8vd5oRFzxyblJjQ8QRV2ChKgD98IhgPM&usqp=CAU'),
+    new Recipe('Another test Recipe', 'This is simply a test', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaFkdFbQrIJ1_04QcvO8h_ap_uZZ_nsXAmrtk8vd5oRFzxyblJjQ8QRV2ChKgD98IhgPM&usqp=CAU')
 
-  recipes: Recipe[]=[
-  new Recipe('A test Recipe', 'This is simply a test', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaFkdFbQrIJ1_04QcvO8h_ap_uZZ_nsXAmrtk8vd5oRFzxyblJjQ8QRV2ChKgD98IhgPM&usqp=CAU'),
-  new Recipe('A test Recipe', 'This is simply a test', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaFkdFbQrIJ1_04QcvO8h_ap_uZZ_nsXAmrtk8vd5oRFzxyblJjQ8QRV2ChKgD98IhgPM&usqp=CAU')
+  ];
 
-];
+  constructor() {
 
+  }
 
+  ngOnInit(): void {
 
+  }
 
-constructor(){
+  onRecipeSelected(recipe: Recipe) {
+    this.recipeWasSelected.emit(recipe);
+  }
 
-}
-
-ngOnInit(): void {
-  
-}
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GameControlComponent } from './components/game/game-control/game-control.component';
+
 import { Router } from '@angular/router';
 
 @Component({

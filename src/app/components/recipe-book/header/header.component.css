@@ -1,0 +1,12 @@
+li { cursor: pointer; }
+@media only screen and (max-width: 768px) {
+    .navbar-links {
+        flex-direction: column;
+        position: static;
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
