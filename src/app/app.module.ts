@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, importProvidersFrom } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,6 +28,15 @@ import { BasicHighlightDirective } from './directives/basic-highlight.directive'
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
 import { UnlessDirective } from './directives/unless.directive';
 import { DropdownDirective } from './directives/dropdown.directive';
+import { AccountComponent } from './components/accounts/account/account.component';
+import { NewAccountComponent } from './components/accounts/new-account/new-account.component';
+import { AccountsComponent } from './components/accounts/accounts.component';
+import { AccountsService } from './services/accounts.service';
+import { LoggingService } from './services/logging.service';
+import { UsersComponent } from './components/users/users.component';
+import { ActiveUsersComponent } from './components/users/active-users/active-users.component';
+import { InactiveUsersComponent } from './components/users/inactive-users/inactive-users.component';
+import { CounterService } from './services/counter.service';
 
 
 @NgModule({
@@ -54,7 +63,14 @@ import { DropdownDirective } from './directives/dropdown.directive';
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
-    DropdownDirective
+    DropdownDirective,
+    AccountComponent,
+    NewAccountComponent,
+    AccountsComponent,
+    UsersComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent,
+    
     
   ],
   imports: [
@@ -62,7 +78,7 @@ import { DropdownDirective } from './directives/dropdown.directive';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AccountsService,LoggingService,CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

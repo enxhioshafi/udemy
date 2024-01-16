@@ -11,8 +11,8 @@ export class AppComponent {
   constructor(private router: Router) {
 
   }
-  redirectToHome() {
-    this.router.navigate(['/home']);
-  }
+ // redirectToHome() {
+  //  this.router.navigate(['/home']);
+ // }
 
 }
